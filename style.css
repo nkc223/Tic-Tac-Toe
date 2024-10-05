@@ -1,0 +1,105 @@
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+    transition: background-color 0.5s ease; /* Smooth background transition */
+}
+
+.game-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border: 2px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cell:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #f05454;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cell.o {
+    color: #6fa8dc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cell.win {
+    background-color: #28a745;
+    color: #000;
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#status {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#reset {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#reset:hover {
+    background-color: #666;
+}
